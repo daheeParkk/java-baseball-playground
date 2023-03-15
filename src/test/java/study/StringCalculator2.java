@@ -29,23 +29,18 @@ public class StringCalculator2 {
 
         switch (values[index]) {
             case "+":
-                index++;
-                result += Integer.parseInt(values[index]);
+                result += Integer.parseInt(values[index+1]);
                 break;
             case "-":
-                index++;
-                result -= Integer.parseInt(values[index]);
+                result -= Integer.parseInt(values[index+1]);
                 break;
             case "*":
-                index++;
-                result *= Integer.parseInt(values[index]);
+                result *= Integer.parseInt(values[index+1]);
                 break;
             case "/":
-                index++;
-                result /= Integer.parseInt(values[index]);
+                result /= Integer.parseInt(values[index+1]);
                 break;
         }
-
         return result;
     }
 }
