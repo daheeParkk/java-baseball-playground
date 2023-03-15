@@ -1,9 +1,9 @@
 package game;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.stream.Stream;
 
 public class NumbersBaseballGame {
@@ -67,5 +67,16 @@ public class NumbersBaseballGame {
         }
 
         return 0;
+    }
+
+    public static class InputView {
+
+        Scanner scanner = new Scanner(System.in);
+
+        public int InputNumber() {
+
+            System.out.println("숫자를 입력해 주세요 : ");
+            return Integer.parseInt(scanner.nextLine());
+        }
     }
 }
