@@ -6,27 +6,32 @@ public class ResultView {
 
     public String  returnResult(int[] strikeAndBall) {
 
-        if (strikeAndBall[0]>0 && strikeAndBall[1]>0) {
-
-            return "\n"+strikeAndBall[1]+"볼 "+strikeAndBall[0]+"스트라이크\n";
-        }
-
-        if (strikeAndBall[0]>0 && strikeAndBall[1] == 0) {
-
-            return "\n"+strikeAndBall[0]+"스트라이크\n";
-        }
-
         if (strikeAndBall[0] == 3) {
 
             return collectAnswer(strikeAndBall);
         }
 
-        if (strikeAndBall[0] == 0 && strikeAndBall[1] > 0) {
+        if (strikeAndBall[0]>0 && strikeAndBall[1]>0) {
 
-            return "\n"+strikeAndBall[1]+"볼\n";
+            System.out.print("\n"+strikeAndBall[1]+"볼 "+strikeAndBall[0]+"스트라이크\n");
         }
 
-        return "\n낫싱\n";
+        if (strikeAndBall[0]>0 && strikeAndBall[1] == 0) {
+
+            System.out.print("\n"+strikeAndBall[0]+"스트라이크\n");
+        }
+
+        if (strikeAndBall[0] == 0 && strikeAndBall[1] > 0) {
+
+            System.out.print("\n"+strikeAndBall[1]+"볼\n");
+        }
+
+        if (strikeAndBall[0] == 0 && strikeAndBall[1] == 0) {
+
+            System.out.print("\n낫싱\n");
+        }
+
+        return "0";
     }
 
     private String collectAnswer(int[] strikeAndBall) {
@@ -35,9 +40,9 @@ public class ResultView {
 
         Scanner scanner = new Scanner(System.in);
         if (scanner.nextLine().equals("1")) {
-            return "계속";
+            return "1";
         }
-        return "종료";
+        return "2";
 
     }
 }
