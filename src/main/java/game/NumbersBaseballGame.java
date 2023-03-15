@@ -8,6 +8,22 @@ import java.util.stream.Stream;
 
 public class NumbersBaseballGame {
 
+    InputView input = new InputView();
+    ResultView result = new ResultView();
+
+    public String startGame() {
+
+        ArrayList<Integer> randomNums = generateRandomNumbers();
+        String checkCorrectAnswer = "0";
+
+        while (checkCorrectAnswer.equals("0")) {
+
+            int[] strikeAndBall = compareNumbers(input.inputNumber(), randomNums);
+            checkCorrectAnswer = result.returnResult(strikeAndBall);
+        }
+        return checkCorrectAnswer;
+    }
+
     public ArrayList<Integer> generateRandomNumbers() {
 
         Random random = new Random();
@@ -69,14 +85,4 @@ public class NumbersBaseballGame {
         return 0;
     }
 
-    public static class InputView {
-
-        Scanner scanner = new Scanner(System.in);
-
-        public int InputNumber() {
-
-            System.out.println("숫자를 입력해 주세요 : ");
-            return Integer.parseInt(scanner.nextLine());
-        }
-    }
 }
