@@ -8,6 +8,38 @@ public class Game {
     private int strike;
     private int ball;
 
+    Balls balls = new Balls();
+    InputView inputView = new InputView();
+    ResultView resultView = new ResultView();
+
+    public void playGame() {
+
+        ArrayList<Integer> computerBalls = balls.createBalls();
+        ArrayList<Integer> myBalls;
+        int[] ballAndStrike;
+        Boolean answer = false;
+
+        while (!answer) {
+
+            myBalls = stringToIntArr(inputView.inputBalls());
+            ballAndStrike = compareBalls(computerBalls, myBalls);
+            answer = resultView.hintOutput(ballAndStrike);
+        }
+    }
+
+    private ArrayList<Integer> stringToIntArr(String inputBalls) {
+
+        ArrayList<Integer> myBalls = new ArrayList<>();
+        String[] inputBall = inputBalls.split("");
+
+        for (String s : inputBall) {
+
+            myBalls.add(Integer.parseInt(s));
+        }
+
+        return myBalls;
+    }
+
     public int[] compareBalls(ArrayList<Integer> computerBalls, ArrayList<Integer> myBalls) {
 
         for (int i = 0; i < myBalls.size(); i++) {
