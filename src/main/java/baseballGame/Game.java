@@ -23,6 +23,8 @@ public class Game {
             ballAndStrike = compareBalls(computerBalls, myBalls);
             answer = resultView.hintOutput(ballAndStrike);
         }
+
+        inputView.restart();
     }
 
     private ArrayList<Integer> stringToIntArr(String inputBalls) {
