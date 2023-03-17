@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class Game {
 
     int[] ballAndStrike = new int[2];
-    private int strike;
-    private int ball;
 
     Balls balls = new Balls();
     InputView inputView = new InputView();
@@ -42,10 +40,13 @@ public class Game {
 
     public int[] compareBalls(ArrayList<Integer> computerBalls, ArrayList<Integer> myBalls) {
 
+        int ball = 0;
+        int strike = 0;
+
         for (int i = 0; i < myBalls.size(); i++) {
 
-            compareNum(computerBalls, myBalls, i);
-            comparePosition(computerBalls, myBalls, i);
+            ball += compareNum(computerBalls, myBalls, i);
+            strike += comparePosition(computerBalls, myBalls, i);
         }
 
         ball -= strike;
@@ -53,20 +54,22 @@ public class Game {
         return createBallAndStrike(ball, strike);
     }
 
-    private void compareNum(ArrayList<Integer> computerBalls, ArrayList<Integer> myBalls, int index) {
+    private int compareNum(ArrayList<Integer> computerBalls, ArrayList<Integer> myBalls, int index) {
 
         if (computerBalls.contains(myBalls.get(index))) {
 
-            ball++;
+            return 1;
         }
+        return 0;
     }
 
-    private void comparePosition(ArrayList<Integer> computerBalls, ArrayList<Integer> myBalls, int i) {
+    private int comparePosition(ArrayList<Integer> computerBalls, ArrayList<Integer> myBalls, int i) {
 
         if (computerBalls.get(i).equals(myBalls.get(i))) {
 
-            strike++;
+            return 1;
         }
+        return 0;
     }
 
     private int[] createBallAndStrike(int ball, int strike) {

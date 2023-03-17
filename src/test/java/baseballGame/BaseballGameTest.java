@@ -23,20 +23,20 @@ public class BaseballGameTest {
 
         ArrayList<Integer> computerBalls = new ArrayList<>();
         ArrayList<Integer> myBalls = new ArrayList<>();
-        computerBalls.add(1);
-        computerBalls.add(2);
-        computerBalls.add(3);
-        myBalls.add(1);
-        myBalls.add(2);
-        myBalls.add(3);
+        computerBalls.add(8);
+        computerBalls.add(7);
+        computerBalls.add(5);
+        myBalls.add(5);
+        myBalls.add(7);
+        myBalls.add(8);
         Game game = new Game();
 
         int[] ballAndStrike = game.compareBalls(computerBalls, myBalls);
         int numOfBall = ballAndStrike[0];
         int numOfStrike = ballAndStrike[1];
 
-        assertThat(numOfBall).isEqualTo(0);
-        assertThat(numOfStrike).isEqualTo(3);
+        assertThat(numOfBall).isEqualTo(2);
+        assertThat(numOfStrike).isEqualTo(1);
     }
 }
 
