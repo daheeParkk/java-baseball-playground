@@ -16,4 +16,6 @@ public class BaseballGameTest {
 
         assertThat(computerBalls.size()).isEqualTo(3);
     }
+
 }
+
