@@ -24,3 +24,11 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+---
+## 구현할 기능
+> - 1에서 9까지 임의의 수 3개를 뽑는 기능
+> - 3자리 수 입력 받는 기능
+> - 숫자 비교하는 기능
+>   - 낫싱, 볼, 스트라이크를 구분하는 기능
+> - 정답 출력하는 기능
+
