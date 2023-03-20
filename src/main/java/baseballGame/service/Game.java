@@ -9,7 +9,7 @@ public class Game {
 
     int[] ballAndStrike = new int[2];
 
-    Balls balls = new Balls();
+    BallService balls = new BallService();
     InputView inputView = new InputView();
     ResultView resultView = new ResultView();
 

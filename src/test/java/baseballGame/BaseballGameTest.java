@@ -1,6 +1,6 @@
 package baseballGame;
 
-import baseballGame.service.Balls;
+import baseballGame.service.BallService;
 import baseballGame.service.Game;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +13,7 @@ public class BaseballGameTest {
     @Test
     void createBallsTest() {
 
-        Balls balls = new Balls();
+        BallService balls = new BallService();
         ArrayList<Integer> computerBalls = balls.createBalls();
 
         assertThat(computerBalls.size()).isEqualTo(3);
