@@ -1,4 +1,6 @@
-package baseballGame;
+package baseballGame.view;
+
+import baseballGame.service.Game;
 
 import java.util.Scanner;
 

@@ -1,4 +1,7 @@
-package baseballGame;
+package baseballGame.service;
+
+import baseballGame.view.InputView;
+import baseballGame.view.ResultView;
 
 import java.util.ArrayList;
 

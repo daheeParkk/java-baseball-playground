@@ -1,4 +1,4 @@
-package baseballGame;
+package baseballGame.service;
 
 import java.util.ArrayList;
 import java.util.Random;

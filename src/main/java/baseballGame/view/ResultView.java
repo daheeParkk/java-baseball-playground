@@ -1,4 +1,4 @@
-package baseballGame;
+package baseballGame.view;
 
 public class ResultView {
 
