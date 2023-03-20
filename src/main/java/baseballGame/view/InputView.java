@@ -26,7 +26,7 @@ public class InputView {
 
         if (restart == 1) {
             GameService baseballGame = new GameService();
-            baseballGame.playGame();
+
         }
 
     }

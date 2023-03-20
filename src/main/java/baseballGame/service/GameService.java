@@ -1,8 +1,6 @@
 package baseballGame.service;
 
 import baseballGame.dto.BallAndStrike;
-import baseballGame.view.InputView;
-import baseballGame.view.ResultView;
 
 import java.util.ArrayList;
 import java.util.List;

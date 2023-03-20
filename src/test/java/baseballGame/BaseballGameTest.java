@@ -1,10 +1,17 @@
 package baseballGame;
 
+import baseballGame.dto.BallAndStrike;
 import baseballGame.service.BallService;
 import baseballGame.service.GameService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -23,22 +30,11 @@ public class BaseballGameTest {
     @Test
     void compareBallsTest() {
 
-        ArrayList<Integer> computerBalls = new ArrayList<>();
-        ArrayList<Integer> myBalls = new ArrayList<>();
-        computerBalls.add(8);
-        computerBalls.add(7);
-        computerBalls.add(5);
-        myBalls.add(5);
-        myBalls.add(7);
-        myBalls.add(8);
         GameService game = new GameService();
-
-        int[] ballAndStrike = game.compareBalls(computerBalls, myBalls);
-        int numOfBall = ballAndStrike[0];
-        int numOfStrike = ballAndStrike[1];
-
-        assertThat(numOfBall).isEqualTo(2);
-        assertThat(numOfStrike).isEqualTo(1);
+        List<Integer> computerBalls = Arrays.asList(1, 2, 3);
+        String myBalls = "123";
+        BallAndStrike ballAndStrike = game.compareBalls(computerBalls, myBalls);
+        assertThat(ballAndStrike.getBallAndStrike()).isEqualTo(Arrays.asList(0, 3));
     }
 }
 
