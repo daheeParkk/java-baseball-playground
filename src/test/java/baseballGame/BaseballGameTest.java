@@ -1,10 +1,11 @@
 package baseballGame;
 
 import baseballGame.service.BallService;
-import baseballGame.service.Game;
+import baseballGame.service.GameService;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -14,7 +15,7 @@ public class BaseballGameTest {
     void createBallsTest() {
 
         BallService balls = new BallService();
-        ArrayList<Integer> computerBalls = balls.createBalls();
+        List<Integer> computerBalls = balls.createBalls();
 
         assertThat(computerBalls.size()).isEqualTo(3);
     }
@@ -30,7 +31,7 @@ public class BaseballGameTest {
         myBalls.add(5);
         myBalls.add(7);
         myBalls.add(8);
-        Game game = new Game();
+        GameService game = new GameService();
 
         int[] ballAndStrike = game.compareBalls(computerBalls, myBalls);
         int numOfBall = ballAndStrike[0];

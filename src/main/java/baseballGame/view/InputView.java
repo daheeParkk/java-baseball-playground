@@ -1,6 +1,6 @@
 package baseballGame.view;
 
-import baseballGame.service.Game;
+import baseballGame.service.GameService;
 
 import java.util.Scanner;
 
@@ -25,7 +25,7 @@ public class InputView {
         int restart = Integer.parseInt(scanner.nextLine());
 
         if (restart == 1) {
-            Game baseballGame = new Game();
+            GameService baseballGame = new GameService();
             baseballGame.playGame();
         }
 

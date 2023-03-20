@@ -1,12 +1,12 @@
 package baseballGame;
 
-import baseballGame.service.Game;
+import baseballGame.service.GameService;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Game baseballGame = new Game();
+        GameService baseballGame = new GameService();
         baseballGame.playGame();
     }
 }
