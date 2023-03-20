@@ -33,5 +33,13 @@ ex) git checkout -b apply-feedback
 > - 힌트를 출력하는 기능
 > - 게임 플레이 기능
 > - 다시 시작 기능
+---
+## 리팩토링
+> - 패키지 분리하기
+> - BallService 
+> - GameService 
+> - Balls 도메인
+> - enum 클래스 사용
+
 
 
