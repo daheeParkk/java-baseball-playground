@@ -1,29 +1,31 @@
 package baseballGame;
 
+import baseballGame.controller.GameController;
 import baseballGame.dto.BallAndStrike;
 import baseballGame.service.BallService;
 import baseballGame.service.GameService;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
 public class BaseballGameTest {
 
+    private static GameController gameController;
+
+    @BeforeAll
+    static void gameController() {
+
+        gameController = new GameController();
+    }
+
     @Test
     void createBallsTest() {
 
-        BallService balls = new BallService();
-        List<Integer> computerBalls = balls.createBalls();
-
+        List<Integer> computerBalls = gameController.createBalls();
         assertThat(computerBalls.size()).isEqualTo(3);
     }
 
