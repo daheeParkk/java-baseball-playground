@@ -1,11 +1,17 @@
 package baseballGame.view;
 
+import baseballGame.dto.BallAndStrike;
+
+import java.util.List;
+
 public class ResultView {
 
-    public Boolean hintOutput(int[] result) {
+    public Boolean hintOutput(BallAndStrike result) {
 
-        int numOfBall = result[0];
-        int numOfStrike = result[1];
+        List<Integer> ballAndStrike = result.getBallAndStrike();
+
+        int numOfBall = ballAndStrike.get(0);
+        int numOfStrike = ballAndStrike.get(1);
 
         Boolean isThreeStrike = separationOfAnswer(numOfBall, numOfStrike);
 
