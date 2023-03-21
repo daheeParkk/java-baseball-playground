@@ -42,6 +42,7 @@ ex) git checkout -b apply-feedback
 > - dto
 >   - BallAndStrike 
 >   - Balls
+> - ResultView 에서 비즈니스 로직 분리
 > - enum 클래스 사용
 
 
