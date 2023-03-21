@@ -44,6 +44,11 @@ ex) git checkout -b apply-feedback
 >   - Balls
 > - ResultView 에서 비즈니스 로직 분리
 > - enum 클래스 사용
+> - 예외처리
+>   - 3자리만 입력하지 않았을 경우
+>   - 같은 숫자를 입력했을 경우
+>   - 3스트라이크 이후 1,2 이외의 숫자를 입력했을 경우
+
 
 
 
