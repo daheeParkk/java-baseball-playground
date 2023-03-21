@@ -36,8 +36,12 @@ ex) git checkout -b apply-feedback
 ---
 ## 리팩토링
 > - 패키지 분리하기
-> - BallService 
-> - GameService
+> - service
+>   - BallService 
+>   - GameService
+> - dto
+>   - BallAndStrike 
+>   - Balls
 > - enum 클래스 사용
 
 

@@ -1,6 +1,7 @@
 package baseballGame.service;
 
 import baseballGame.dto.BallAndStrike;
+import baseballGame.dto.Balls;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,33 +23,34 @@ public class GameService {
 
     public BallAndStrike compareBalls(List<Integer> computerBalls, String inputBalls) {
 
-        List<Integer> myBalls = stringToIntArr(inputBalls);
-
         int ball = 0;
         int strike = 0;
 
+        List<Integer> myBalls = stringToIntArr(inputBalls);
+        Balls balls = new Balls(computerBalls, myBalls);
+
         for (int i = 0; i < myBalls.size(); i++) {
 
-            ball += compareNum(computerBalls, myBalls, i);
-            strike += comparePosition(computerBalls, myBalls, i);
+            ball += compareNum(balls, i);
+            strike += comparePosition(balls, i);
         }
 
         ball -= strike;
         return new BallAndStrike(ball, strike);
     }
 
-    private int compareNum(List<Integer> computerBalls, List<Integer> myBalls, int index) {
+    private int compareNum(Balls balls, int myBallsIndex) {
 
-        if (computerBalls.contains(myBalls.get(index))) {
+        if (balls.contains(myBallsIndex)) {
 
             return 1;
         }
         return 0;
     }
 
-    private int comparePosition(List<Integer> computerBalls, List<Integer> myBalls, int i) {
+    private int comparePosition(Balls balls, int ballsIndex) {
 
-        if (computerBalls.get(i).equals(myBalls.get(i))) {
+        if (balls.compare(ballsIndex)) {
 
             return 1;
         }
