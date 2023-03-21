@@ -1,5 +1,7 @@
 package baseballGame.view;
 
+import baseballGame.result.Input;
+
 import java.util.Scanner;
 
 public class InputView {
@@ -8,11 +10,11 @@ public class InputView {
 
     public String inputBalls() {
 
-        System.out.print("숫자를 입력해 주세요 : ");
+        System.out.print(Input.NUM);
         String inputBalls = scanner.nextLine();
         while (inputBalls.length() != 3) {
 
-            System.out.println("숫자 3개를 다시 입력해 주세요");
+            System.out.println(Input.AGAIN);
             inputBalls = scanner.nextLine();
         }
 

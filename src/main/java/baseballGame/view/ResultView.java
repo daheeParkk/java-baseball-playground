@@ -1,6 +1,7 @@
 package baseballGame.view;
 
 import baseballGame.dto.BallAndStrike;
+import baseballGame.result.Input;
 import baseballGame.result.Result;
 import baseballGame.service.ResultService;
 
@@ -24,7 +25,7 @@ public class ResultView {
         if (isThreeStrike) {
 
             System.out.println(Result.GAME_OVER.getMessage());
-            System.out.println(Result.IS_RESTART.getMessage());
+            System.out.println(Input.IS_RESTART.getMessage());
             return true;
         }
         return false;
