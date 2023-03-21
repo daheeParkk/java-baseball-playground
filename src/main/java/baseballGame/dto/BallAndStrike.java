@@ -20,4 +20,18 @@ public class BallAndStrike {
         return new ArrayList<>(Arrays.asList(ball, strike));
     }
 
+    public boolean ballIsZero() {
+
+        return ball == 0;
+    }
+
+    public boolean strikeIsZero() {
+
+        return strike == 0;
+    }
+
+    public Boolean strikeIsThree() {
+
+        return strike == 3;
+    }
 }

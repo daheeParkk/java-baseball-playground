@@ -26,9 +26,9 @@ public class GameController {
         return gameService.compareBalls(computerBalls, myBalls);
     }
 
-    public Boolean hintOutput(BallAndStrike ballAndStrike) {
+    public Boolean resultOutput(BallAndStrike ballAndStrike) {
 
-        return resultView.hintOutput(ballAndStrike);
+        return resultView.resultOutput(ballAndStrike);
     }
 
 }

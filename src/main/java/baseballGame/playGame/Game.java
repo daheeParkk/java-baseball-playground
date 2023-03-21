@@ -28,7 +28,7 @@ public class Game {
         while (!answer) {
 
             BallAndStrike ballAndStrike = gameController.compareBalls(computerBalls);
-            answer = gameController.hintOutput(ballAndStrike);
+            answer = gameController.resultOutput(ballAndStrike);
         }
 
         restart = inputView.restart();

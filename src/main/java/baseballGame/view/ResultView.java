@@ -1,19 +1,24 @@
 package baseballGame.view;
 
 import baseballGame.dto.BallAndStrike;
+import baseballGame.service.ResultService;
 
 import java.util.List;
 
 public class ResultView {
 
-    public Boolean hintOutput(BallAndStrike result) {
+    private int numOfBall;
+    private int numOfStrike;
 
+    public Boolean resultOutput(BallAndStrike result) {
+
+        ResultService resultService = new ResultService();
         List<Integer> ballAndStrike = result.getBallAndStrike();
 
-        int numOfBall = ballAndStrike.get(0);
-        int numOfStrike = ballAndStrike.get(1);
+        numOfBall = ballAndStrike.get(0);
+        numOfStrike = ballAndStrike.get(1);
 
-        Boolean isThreeStrike = separationOfAnswer(numOfBall, numOfStrike);
+        Boolean isThreeStrike = resultService.separationOfAnswer(result);
 
         if (isThreeStrike) {
 
@@ -24,29 +29,23 @@ public class ResultView {
         return false;
     }
 
-    private Boolean separationOfAnswer(int ball, int strike) {
+    public void nothing() {
 
-        if (ball == 0 && strike == 0) {
-
-            System.out.print("낫싱\n");
-            return false;
-        }
-        if (ball != 0 && strike == 0) {
-
-            System.out.print(ball + "볼\n");
-            return false;
-        }
-        if (ball == 0) {
-
-            System.out.print(strike + "스트라이크\n");
-            return checkAnswer(strike);
-        }
-        System.out.print(ball + "볼 " + strike + "스트라이크\n");
-        return false;
+        System.out.print("낫싱\n");
     }
 
-    private Boolean checkAnswer(int strike) {
+    public void ball() {
 
-        return strike == 3;
+        System.out.print(numOfBall + "볼\n");
+    }
+
+    public void strike() {
+
+        System.out.print(numOfStrike + "스트라이크\n");
+    }
+
+    public void ballStrike() {
+
+        System.out.print(numOfBall + "볼 " + numOfStrike + "스트라이크\n");
     }
 }
