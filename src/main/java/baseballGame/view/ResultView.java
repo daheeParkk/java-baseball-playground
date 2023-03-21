@@ -1,6 +1,7 @@
 package baseballGame.view;
 
 import baseballGame.dto.BallAndStrike;
+import baseballGame.result.Result;
 import baseballGame.service.ResultService;
 
 import java.util.List;
@@ -22,8 +23,8 @@ public class ResultView {
 
         if (isThreeStrike) {
 
-            System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
-            System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+            System.out.println(Result.GAME_OVER.getMessage());
+            System.out.println(Result.IS_RESTART.getMessage());
             return true;
         }
         return false;
@@ -31,21 +32,21 @@ public class ResultView {
 
     public void nothing() {
 
-        System.out.print("낫싱\n");
+        System.out.print(Result.NOTHING.getMessage() + "\n");
     }
 
     public void ball() {
 
-        System.out.print(numOfBall + "볼\n");
+        System.out.print(numOfBall + Result.BALL.getMessage() + "\n");
     }
 
     public void strike() {
 
-        System.out.print(numOfStrike + "스트라이크\n");
+        System.out.print(numOfStrike + Result.STRIKE.getMessage() + "\n");
     }
 
     public void ballStrike() {
 
-        System.out.print(numOfBall + "볼 " + numOfStrike + "스트라이크\n");
+        System.out.print(numOfBall + Result.BALL.getMessage() + " " + numOfStrike + Result.STRIKE.getMessage() + "\n");
     }
 }
