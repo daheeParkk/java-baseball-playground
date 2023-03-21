@@ -1,10 +1,9 @@
 package baseballGame.view;
 
-import baseballGame.service.GameService;
-
 import java.util.Scanner;
 
 public class InputView {
+
     Scanner scanner = new Scanner(System.in);
 
     public String inputBalls() {

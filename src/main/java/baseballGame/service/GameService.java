@@ -29,7 +29,7 @@ public class GameService {
         List<Integer> myBalls = stringToIntArr(inputBalls);
         Balls balls = new Balls(computerBalls, myBalls);
 
-        for (int i = 0; i < myBalls.size(); i++) {
+        for (int i = 0; i < BallService.NUMBER_OF_BALLS; i++) {
 
             ball += compareNum(balls, i);
             strike += comparePosition(balls, i);
