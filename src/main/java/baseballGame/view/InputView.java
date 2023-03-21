@@ -20,14 +20,8 @@ public class InputView {
         return inputBalls;
     }
 
-    public void restart() {
+    public int restart() {
 
-        int restart = Integer.parseInt(scanner.nextLine());
-
-        if (restart == 1) {
-            GameService baseballGame = new GameService();
-
-        }
-
+        return Integer.parseInt(scanner.nextLine());
     }
 }
