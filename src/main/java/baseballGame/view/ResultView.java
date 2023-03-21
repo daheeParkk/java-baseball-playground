@@ -8,8 +8,8 @@ import java.util.List;
 
 public class ResultView {
 
-    private int numOfBall;
-    private int numOfStrike;
+    private static int numOfBall;
+    private static int numOfStrike;
 
     public Boolean resultOutput(BallAndStrike result) {
 

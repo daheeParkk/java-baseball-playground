@@ -8,9 +8,11 @@ public class BallService {
 
     public static final int NUMBER_OF_BALLS = 3;
     private final Random random = new Random();
-    private final List<Integer> balls = new ArrayList<>();
+    private List<Integer> balls;
 
     public List<Integer> createBalls() {
+
+        balls = new ArrayList<>();
 
         while (balls.size() < NUMBER_OF_BALLS) {
 

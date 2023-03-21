@@ -25,12 +25,17 @@ public class BallAndStrike {
         return ball == 0;
     }
 
+    public boolean ballIsNotZero() {
+
+        return ball != 0;
+    }
+
     public boolean strikeIsZero() {
 
         return strike == 0;
     }
 
-    public Boolean strikeIsThree() {
+    public boolean strikeIsThree() {
 
         return strike == 3;
     }

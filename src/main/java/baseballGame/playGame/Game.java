@@ -11,18 +11,19 @@ public class Game {
     private final GameController gameController = new GameController();
     private final InputView inputView = new InputView();
     private int restart = 1;
+    private List<Integer> computerBalls;
 
     public void play() {
 
         while (restart == 1) {
 
+            computerBalls = gameController.createBalls();
             start();
         }
     }
 
     private void start() {
 
-        List<Integer> computerBalls = gameController.createBalls();
         Boolean answer = false;
 
         while (!answer) {

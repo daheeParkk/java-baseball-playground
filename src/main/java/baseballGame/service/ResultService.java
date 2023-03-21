@@ -14,7 +14,7 @@ public class ResultService {
             resultView.nothing();
             return false;
         }
-        if (!result.ballIsZero() && result.strikeIsZero()) {
+        if (result.ballIsNotZero() && result.strikeIsZero()) {
 
             resultView.ball();
             return false;
