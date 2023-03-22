@@ -1,21 +1,34 @@
 package baseballGame.view;
 
-import baseballGame.result.Input;
+import baseballGame.exception.DuplicateNumber;
+import baseballGame.exception.NotNumber;
+import baseballGame.exception.WrongLength;
+import baseballGame.service.InputService;
+import baseballGame.ui.Input;
 
 import java.util.Scanner;
 
 public class InputView {
 
+    private final InputService inputService = new InputService();
     Scanner scanner = new Scanner(System.in);
+    private static String inputBalls;
 
     public String inputBalls() {
 
-        System.out.print(Input.NUM);
-        String inputBalls = scanner.nextLine();
-        while (inputBalls.length() != 3) {
+        boolean correctInput = false;
+        System.out.print(Input.NUM.getMessage());
 
-            System.out.println(Input.AGAIN);
-            inputBalls = scanner.nextLine();
+        while (!correctInput) {
+
+            try {
+                inputBalls = scanner.nextLine();
+                inputService.checkCollect(inputBalls);
+                correctInput = true;
+            } catch (WrongLength | DuplicateNumber | NotNumber ex) {
+                System.out.print(ex.getMessage()+"\n");
+                System.out.println(Input.AGAIN.getMessage());
+            }
         }
 
         return inputBalls;

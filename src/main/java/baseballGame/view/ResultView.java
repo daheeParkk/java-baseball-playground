@@ -1,8 +1,8 @@
 package baseballGame.view;
 
 import baseballGame.dto.BallAndStrike;
-import baseballGame.result.Input;
-import baseballGame.result.Result;
+import baseballGame.ui.Input;
+import baseballGame.ui.Result;
 import baseballGame.service.ResultService;
 
 import java.util.List;
