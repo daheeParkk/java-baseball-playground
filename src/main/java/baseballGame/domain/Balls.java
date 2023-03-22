@@ -1,5 +1,6 @@
 package baseballGame.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Balls {
@@ -9,8 +10,8 @@ public class Balls {
 
     public Balls(List<Integer> computerBalls, List<Integer> myBalls) {
 
-        this.computerBalls = computerBalls;
-        this.myBalls = myBalls;
+        this.computerBalls = new ArrayList<>(computerBalls);
+        this.myBalls = new ArrayList<>(myBalls);
     }
 
     public Boolean contains(int myBallsIndex) {
