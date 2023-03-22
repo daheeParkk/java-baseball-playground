@@ -1,11 +1,11 @@
 package baseballGame.exception;
 
-import baseballGame.utils.Result;
+import static baseballGame.utils.ExceptionMessage.WRONG_LENGTH;
 
 public class WrongLength extends Exception {
 
     public WrongLength() {
 
-        super(Result.WRONG_LENGTH.getMessage());
+        super(WRONG_LENGTH.getMessage());
     }
 }

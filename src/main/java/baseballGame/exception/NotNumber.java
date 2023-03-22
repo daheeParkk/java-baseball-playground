@@ -1,11 +1,11 @@
 package baseballGame.exception;
 
-import baseballGame.utils.Result;
+import static baseballGame.utils.ExceptionMessage.NOT_NUMBER;
 
 public class NotNumber extends Exception {
 
     public NotNumber() {
 
-        super(Result.NOT_NUMBER.getMessage());
+        super(NOT_NUMBER.getMessage());
     }
 }

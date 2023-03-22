@@ -1,11 +1,11 @@
 package baseballGame.exception;
 
-import baseballGame.utils.Result;
+import static baseballGame.utils.ExceptionMessage.*;
 
 public class DuplicateNumber extends Exception {
 
     public DuplicateNumber() {
 
-        super(Result.DUPLICATE_NUMBER.getMessage());
+        super(DUPLICATE_NUMBER.getMessage());
     }
 }
