@@ -56,7 +56,7 @@ ex) git checkout -b apply-feedback
 > - --
 > - 기능 단위 테스트
 >   - ballTest
->   - correctInputTest
+>   - ExceptionTest
 
 
 
