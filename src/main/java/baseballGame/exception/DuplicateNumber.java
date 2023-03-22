@@ -8,9 +8,4 @@ public class DuplicateNumber extends Exception {
 
         super(Result.DUPLICATE_NUMBER.getMessage());
     }
-
-    public DuplicateNumber(String msg) {
-
-        super(msg);
-    }
 }

@@ -8,9 +8,4 @@ public class NotOneTwo extends Exception {
 
         super(Result.NOT_ONE_TWO.getMessage());
     }
-
-    public NotOneTwo(String msg) {
-
-        super(msg);
-    }
 }

@@ -8,9 +8,4 @@ public class NotNumber extends Exception {
 
         super(Result.NOT_NUMBER.getMessage());
     }
-
-    public NotNumber(String msg) {
-
-        super(msg);
-    }
 }

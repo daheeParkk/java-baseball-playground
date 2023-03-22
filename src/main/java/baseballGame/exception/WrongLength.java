@@ -8,9 +8,4 @@ public class WrongLength extends Exception {
 
         super(Result.WRONG_LENGTH.getMessage());
     }
-
-    public WrongLength(String msg) {
-
-        super(msg);
-    }
 }
