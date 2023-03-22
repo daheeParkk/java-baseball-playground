@@ -18,7 +18,7 @@ public class InputService {
         char secondBall = inputBalls.charAt(1);
         char thirdBall = inputBalls.charAt(2);
 
-        if (!isNumeric(inputBalls)) {
+        if (isNumeric(inputBalls)) {
 
             throw new NotNumber();
         }
@@ -31,12 +31,12 @@ public class InputService {
 
     private boolean isNumeric(String inputBalls) {
 
-        return inputBalls.chars().allMatch(Character::isDigit);
+        return !inputBalls.chars().allMatch(Character::isDigit);
     }
 
     public void checkOneTwo(String isRestart) throws NotOneTwo, NotNumber {
 
-        if (!isNumeric(isRestart)) {
+        if (isNumeric(isRestart)) {
 
             throw new NotNumber();
         }
