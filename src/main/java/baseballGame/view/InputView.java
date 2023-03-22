@@ -9,17 +9,19 @@ import baseballGame.utils.Input;
 
 import java.util.Scanner;
 
+import static baseballGame.utils.Input.*;
+
 public class InputView {
 
-    private static String inputBalls;
-    private static String isRestart;
+    private String inputBalls;
+    private String isRestart;
     private final InputService inputService = new InputService();
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     private boolean correctInput = false;
 
     public String inputBalls() {
 
-        System.out.print(Input.NUM.getMessage());
+        System.out.print(NUM.getMessage());
 
         while (!correctInput) {
 
@@ -29,7 +31,7 @@ public class InputView {
                 correctInput = true;
             } catch (WrongLength | DuplicateNumber | NotNumber ex) {
                 System.out.print(ex.getMessage() + "\n");
-                System.out.println(Input.AGAIN.getMessage());
+                System.out.println(AGAIN.getMessage());
             }
         }
 
@@ -48,7 +50,7 @@ public class InputView {
                 correctInput = true;
             } catch (NotOneTwo | NotNumber ex) {
                 System.out.print(ex.getMessage() + "\n");
-                System.out.print(Input.AGAIN_ONE_TWO.getMessage());
+                System.out.print(AGAIN_ONE_TWO.getMessage());
             }
         }
 
