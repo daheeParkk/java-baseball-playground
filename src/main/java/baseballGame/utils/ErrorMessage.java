@@ -1,6 +1,6 @@
 package baseballGame.utils;
 
-public enum ExceptionMessage {
+public enum ErrorMessage {
 
     DUPLICATE_NUMBER("숫자 중복 오류"),
     WRONG_LENGTH("숫자 길이 오류"),
@@ -9,7 +9,7 @@ public enum ExceptionMessage {
 
     private final String message;
 
-    ExceptionMessage(String message) {
+    ErrorMessage(String message) {
 
         this.message = message;
     }

@@ -1,6 +1,6 @@
 package baseballGame.exception;
 
-import static baseballGame.utils.ExceptionMessage.NOT_ONE_TWO;
+import static baseballGame.utils.ErrorMessage.NOT_ONE_TWO;
 
 public class NotOneTwo extends Exception {
 

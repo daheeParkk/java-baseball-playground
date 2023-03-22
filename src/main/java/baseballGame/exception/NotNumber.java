@@ -1,6 +1,6 @@
 package baseballGame.exception;
 
-import static baseballGame.utils.ExceptionMessage.NOT_NUMBER;
+import static baseballGame.utils.ErrorMessage.NOT_NUMBER;
 
 public class NotNumber extends Exception {
 

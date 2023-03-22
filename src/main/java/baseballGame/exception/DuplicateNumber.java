@@ -1,6 +1,6 @@
 package baseballGame.exception;
 
-import static baseballGame.utils.ExceptionMessage.*;
+import static baseballGame.utils.ErrorMessage.*;
 
 public class DuplicateNumber extends Exception {
 

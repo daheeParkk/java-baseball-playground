@@ -1,6 +1,6 @@
 package baseballGame.exception;
 
-import static baseballGame.utils.ExceptionMessage.WRONG_LENGTH;
+import static baseballGame.utils.ErrorMessage.WRONG_LENGTH;
 
 public class WrongLength extends Exception {
 
