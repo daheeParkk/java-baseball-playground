@@ -12,10 +12,11 @@ public class Game {
     private final InputView inputView = new InputView();
     private int restart = 1;
     private List<Integer> computerBalls;
+    public final static int RESTART_NUM = 1;
 
     public void play() {
 
-        while (restart == 1) {
+        while (restart == RESTART_NUM) {
 
             computerBalls = gameController.createBalls();
             start();

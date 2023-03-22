@@ -4,13 +4,12 @@ import baseballGame.exception.DuplicateNumber;
 import baseballGame.exception.NotNumber;
 import baseballGame.exception.NotOneTwo;
 import baseballGame.exception.WrongLength;
-import baseballGame.ui.Result;
 
 public class InputService {
 
     public void checkCollect(String inputBalls) throws DuplicateNumber, WrongLength, NotNumber {
 
-        if (inputBalls.length() != 3) {
+        if (inputBalls.length() != BallService.NUMBER_OF_BALLS) {
 
             throw new WrongLength();
         }
