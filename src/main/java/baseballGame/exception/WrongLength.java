@@ -2,7 +2,7 @@ package baseballGame.exception;
 
 import baseballGame.ui.Result;
 
-public class WrongLength extends Exception{
+public class WrongLength extends Exception {
 
     public WrongLength() {
 

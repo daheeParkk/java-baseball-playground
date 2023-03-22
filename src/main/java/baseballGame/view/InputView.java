@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 public class InputView {
 
-    private final InputService inputService = new InputService();
-    Scanner scanner = new Scanner(System.in);
     private static String inputBalls;
     private static String isRestart;
+    private final InputService inputService = new InputService();
+    Scanner scanner = new Scanner(System.in);
     private boolean correctInput = false;
 
     public String inputBalls() {
@@ -28,7 +28,7 @@ public class InputView {
                 inputService.checkCollect(inputBalls);
                 correctInput = true;
             } catch (WrongLength | DuplicateNumber | NotNumber ex) {
-                System.out.print(ex.getMessage()+"\n");
+                System.out.print(ex.getMessage() + "\n");
                 System.out.println(Input.AGAIN.getMessage());
             }
         }
