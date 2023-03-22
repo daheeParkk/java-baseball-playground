@@ -10,9 +10,9 @@ public class Game {
 
     private final GameController gameController = new GameController();
     private final InputView inputView = new InputView();
-    private int restart = 1;
     private List<Integer> computerBalls;
-    public final static int RESTART_NUM = 1;
+    private final static int RESTART_NUM = 1;
+    private int restart = RESTART_NUM;
 
     public void play() {
 

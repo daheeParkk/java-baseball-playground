@@ -9,6 +9,9 @@ import static baseballGame.service.BallService.*;
 
 public class InputService {
 
+    private static final String RESTART_NUMBER = "1";
+    private static final String GAME_OVER_NUMBER = "2";
+
     public void checkCollect(String inputBalls) throws DuplicateNumber, WrongLength, NotNumber {
 
         if (inputBalls.length() != NUMBER_OF_BALLS) {
@@ -43,7 +46,7 @@ public class InputService {
             throw new NotNumber();
         }
 
-        if (!isRestart.equals("1") && !isRestart.equals("2")) {
+        if (!isRestart.equals(RESTART_NUMBER) && !isRestart.equals(GAME_OVER_NUMBER)) {
 
             throw new NotOneTwo();
         }
