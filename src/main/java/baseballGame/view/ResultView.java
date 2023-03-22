@@ -7,6 +7,9 @@ import baseballGame.service.ResultService;
 
 import java.util.List;
 
+import static baseballGame.ui.Input.*;
+import static baseballGame.ui.Result.*;
+
 public class ResultView {
 
     private static int numOfBall;
@@ -24,8 +27,8 @@ public class ResultView {
 
         if (isThreeStrike) {
 
-            System.out.println(Result.GAME_OVER.getMessage());
-            System.out.println(Input.IS_RESTART.getMessage());
+            System.out.println(GAME_OVER.getMessage());
+            System.out.println(IS_RESTART.getMessage());
             return true;
         }
         return false;
@@ -33,21 +36,21 @@ public class ResultView {
 
     public void nothing() {
 
-        System.out.print(Result.NOTHING.getMessage() + "\n");
+        System.out.print(NOTHING.getMessage() + "\n");
     }
 
     public void ball() {
 
-        System.out.print(numOfBall + Result.BALL.getMessage() + "\n");
+        System.out.print(numOfBall + BALL.getMessage() + "\n");
     }
 
     public void strike() {
 
-        System.out.print(numOfStrike + Result.STRIKE.getMessage() + "\n");
+        System.out.print(numOfStrike + STRIKE.getMessage() + "\n");
     }
 
     public void ballStrike() {
 
-        System.out.print(numOfBall + Result.BALL.getMessage() + " " + numOfStrike + Result.STRIKE.getMessage() + "\n");
+        System.out.print(numOfBall + BALL.getMessage() + " " + numOfStrike + STRIKE.getMessage() + "\n");
     }
 }

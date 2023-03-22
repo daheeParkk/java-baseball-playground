@@ -6,6 +6,8 @@ import baseballGame.dto.Balls;
 import java.util.ArrayList;
 import java.util.List;
 
+import static baseballGame.service.BallService.*;
+
 public class GameService {
 
     private List<Integer> stringToIntArr(String inputBalls) {
@@ -29,7 +31,7 @@ public class GameService {
         List<Integer> myBalls = stringToIntArr(inputBalls);
         Balls balls = new Balls(computerBalls, myBalls);
 
-        for (int i = 0; i < BallService.NUMBER_OF_BALLS; i++) {
+        for (int i = 0; i < NUMBER_OF_BALLS; i++) {
 
             ball += compareNum(balls, i);
             strike += comparePosition(balls, i);
