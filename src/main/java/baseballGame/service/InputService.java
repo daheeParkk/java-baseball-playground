@@ -5,6 +5,9 @@ import baseballGame.exception.NotNumber;
 import baseballGame.exception.NotOneTwo;
 import baseballGame.exception.WrongLength;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static baseballGame.service.BallService.*;
 
 public class InputService {
@@ -19,16 +22,14 @@ public class InputService {
             throw new WrongLength();
         }
 
-        char firstBall = inputBalls.charAt(0);
-        char secondBall = inputBalls.charAt(1);
-        char thirdBall = inputBalls.charAt(2);
-
         if (isNumeric(inputBalls)) {
 
             throw new NotNumber();
         }
 
-        if (firstBall == secondBall || firstBall == thirdBall || secondBall == thirdBall) {
+        List<String> ballNumbers = Arrays.asList(inputBalls.split(""));
+
+        if (ballNumbers.size() != ballNumbers.stream().distinct().count()) {
 
             throw new DuplicateNumber();
         }
