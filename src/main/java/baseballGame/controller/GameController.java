@@ -1,6 +1,6 @@
 package baseballGame.controller;
 
-import baseballGame.dto.BallAndStrike;
+import baseballGame.domain.BallAndStrike;
 import baseballGame.service.BallService;
 import baseballGame.service.GameService;
 import baseballGame.view.InputView;

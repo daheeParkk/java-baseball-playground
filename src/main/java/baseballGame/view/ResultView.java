@@ -1,14 +1,12 @@
 package baseballGame.view;
 
-import baseballGame.dto.BallAndStrike;
-import baseballGame.ui.Input;
-import baseballGame.ui.Result;
+import baseballGame.domain.BallAndStrike;
 import baseballGame.service.ResultService;
 
 import java.util.List;
 
-import static baseballGame.ui.Input.*;
-import static baseballGame.ui.Result.*;
+import static baseballGame.utils.Input.*;
+import static baseballGame.utils.Result.*;
 
 public class ResultView {
 

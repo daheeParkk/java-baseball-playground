@@ -1,4 +1,4 @@
-package baseballGame.ui;
+package baseballGame.utils;
 
 public enum Input {
 

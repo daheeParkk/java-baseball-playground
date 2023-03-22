@@ -1,6 +1,6 @@
 package baseballGame;
 
-import baseballGame.dto.BallAndStrike;
+import baseballGame.domain.BallAndStrike;
 import baseballGame.service.BallService;
 import baseballGame.service.GameService;
 import org.junit.jupiter.api.BeforeAll;

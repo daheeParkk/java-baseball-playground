@@ -1,7 +1,7 @@
 package baseballGame.playGame;
 
 import baseballGame.controller.GameController;
-import baseballGame.dto.BallAndStrike;
+import baseballGame.domain.BallAndStrike;
 import baseballGame.view.InputView;
 
 import java.util.List;

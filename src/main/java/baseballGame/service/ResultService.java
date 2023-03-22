@@ -1,6 +1,6 @@
 package baseballGame.service;
 
-import baseballGame.dto.BallAndStrike;
+import baseballGame.domain.BallAndStrike;
 import baseballGame.view.ResultView;
 
 public class ResultService {

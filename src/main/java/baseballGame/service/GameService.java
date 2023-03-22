@@ -1,7 +1,7 @@
 package baseballGame.service;
 
-import baseballGame.dto.BallAndStrike;
-import baseballGame.dto.Balls;
+import baseballGame.domain.BallAndStrike;
+import baseballGame.domain.Balls;
 
 import java.util.ArrayList;
 import java.util.List;

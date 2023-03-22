@@ -1,6 +1,6 @@
 package baseballGame.exception;
 
-import baseballGame.ui.Result;
+import baseballGame.utils.Result;
 
 public class NotOneTwo extends Exception {
 

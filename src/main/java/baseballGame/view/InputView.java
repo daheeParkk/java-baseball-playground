@@ -5,7 +5,7 @@ import baseballGame.exception.NotNumber;
 import baseballGame.exception.NotOneTwo;
 import baseballGame.exception.WrongLength;
 import baseballGame.service.InputService;
-import baseballGame.ui.Input;
+import baseballGame.utils.Input;
 
 import java.util.Scanner;
 
