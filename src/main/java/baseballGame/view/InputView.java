@@ -2,6 +2,7 @@ package baseballGame.view;
 
 import baseballGame.exception.DuplicateNumber;
 import baseballGame.exception.NotNumber;
+import baseballGame.exception.NotOneTwo;
 import baseballGame.exception.WrongLength;
 import baseballGame.service.InputService;
 import baseballGame.ui.Input;
@@ -13,10 +14,11 @@ public class InputView {
     private final InputService inputService = new InputService();
     Scanner scanner = new Scanner(System.in);
     private static String inputBalls;
+    private static String isRestart;
+    private boolean correctInput = false;
 
     public String inputBalls() {
 
-        boolean correctInput = false;
         System.out.print(Input.NUM.getMessage());
 
         while (!correctInput) {
@@ -31,11 +33,27 @@ public class InputView {
             }
         }
 
+        correctInput = false;
+
         return inputBalls;
     }
 
     public int restart() {
 
-        return Integer.parseInt(scanner.nextLine());
+        while (!correctInput) {
+
+            try {
+                isRestart = scanner.nextLine();
+                inputService.checkOneTwo(isRestart);
+                correctInput = true;
+            } catch (NotOneTwo | NotNumber ex) {
+                System.out.print(ex.getMessage() + "\n");
+                System.out.print(Input.AGAIN_ONE_TWO.getMessage());
+            }
+        }
+
+        correctInput = false;
+
+        return Integer.parseInt(isRestart);
     }
 }
